@@ -9,5 +9,4 @@ import java.util.UUID;
 public interface SessionRepository extends JpaRepository<Session, UUID> {
     List<Session> findByPlayerId(UUID playerId);
     boolean existsByPlayerIdAndLogoutTimestampIsNull(UUID playerId);
-    List<Session> findByPlayerIdAndLogoutTimestampIsNotNull(UUID playerId);
 }
